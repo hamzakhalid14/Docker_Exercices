@@ -1,0 +1,22 @@
+# Docker Containers Exercise
+
+## Steps to Run and Manage Docker Containers
+
+1. **Start 3 containers from an image (nginx) in detached mode:**
+docker run -d --name nginx1 nginx
+docker run -d --name nginx2 nginx
+docker run -d --name nginx3 nginx
+
+2. **Stop two of the containers:**
+docker stop nginx1
+docker stop nginx2
+
+3. **Check the status of all containers:**
+docker ps -a
+
+
+**OUTPUT**
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
+a1b2c3d4e5f6   nginx     "/docker-entrypoint.…"   10 minutes ago   Up 10 minutes               80/tcp    nginx3
+d4e5f6a7b8c9   nginx     "/docker-entrypoint.…"   10 minutes ago   Exited (0) 5 minutes ago              nginx2
+b8c9d0e1f2g3   nginx     "/docker-entrypoint.…"   10 minutes ago   Exited (0) 5 minutes ago              nginx1
